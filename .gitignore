@@ -1,0 +1,46 @@
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local database files
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+
+# Runtime-generated storage and secrets
+app/static/
+app/keys/
+
+# Frontend dependencies and build output
+CDPan/node_modules/
+CDPan/dist/
+
+# Frontend local env files
+CDPan/.env
+CDPan/.env.local
+CDPan/.env.development.local
+CDPan/.env.production.local
+
+# IDE and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

@@ -1,0 +1,12 @@
+# Backend dependencies for the FastAPI service.
+# Frontend dependencies are managed separately in CDPan/package.json.
+
+fastapi==0.135.1
+sqlalchemy==2.0.48
+pydantic==2.12.5
+PyJWT==2.12.1
+pwdlib==0.3.0
+pypdf==6.9.1
+cryptography==46.0.5
+python-multipart==0.0.22
+uvicorn==0.41.0
