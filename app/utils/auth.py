@@ -11,9 +11,12 @@ from sqlalchemy.orm import Session
 from app import database
 from app import models
 
-SECRET_KEY = os.getenv("SECRET_KEY", "your-secret-key")
+SECRET_KEY = os.getenv("SECRET_KEY")
+if not SECRET_KEY:
+    raise RuntimeError("SECRET_KEY is required in environment variables")
+
 ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_DAYS = 1
+ACCESS_TOKEN_EXPIRE_DAYS = int(os.getenv("ACCESS_TOKEN_EXPIRE_DAYS", "1"))
 passwordhash = PasswordHash.recommended()
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/login")
 
