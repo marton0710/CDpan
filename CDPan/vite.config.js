@@ -6,6 +6,7 @@ export default defineConfig(({ mode }) => {
   const proxyTarget = env.VITE_PROXY_TARGET || "http://127.0.0.1:80";
 
   return {
+    publicDir: "static",
     plugins: [vue()],
     server: {
       host: "0.0.0.0",

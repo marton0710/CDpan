@@ -11,7 +11,7 @@ from sqlalchemy.orm import Session
 from app import database
 from app import models
 
-SECRET_KEY = os.getenv("SECRET_KEY")
+SECRET_KEY = os.getenv("SECRET_KEY", "Your-secret-key")
 if not SECRET_KEY:
     raise RuntimeError("SECRET_KEY is required in environment variables")
 

@@ -5,20 +5,31 @@ defineEmits(["open-login", "open-register"]);
 <template>
   <section class="hero-card">
     <div class="hero-copy">
-      <p class="eyebrow">Secure PDF Hub</p>
-      <h1>让用户直接上传、签名、追踪和管理 PDF 文件</h1>
-      <p class="hero-text">
-        CDPan 提供用户认证、文件工作台、数字签名、版本识别和安全追踪能力，
-        可以作为可直接部署的 PDF 文件服务入口。
-      </p>
+      <div class="hero-top">
+        <div class="hero-main">
+          <p class="eyebrow">Secure PDF Hub</p>
+          <h1>让用户直接上传、签名、追踪和管理 PDF 文件</h1>
+          <p class="hero-text">
+            智签守护 提供用户认证、文件工作台、数字签名、版本识别和安全追踪能力，
+            可以作为可直接部署的 PDF 文件服务入口。
+          </p>
 
-      <div class="hero-actions">
-        <el-button type="primary" size="large" @click="$emit('open-register')">
-          立即注册
-        </el-button>
-        <el-button size="large" plain @click="$emit('open-login')">
-          已有账号，去登录
-        </el-button>
+          <div class="hero-actions">
+            <el-button type="primary" size="large" @click="$emit('open-register')">
+              立即注册
+            </el-button>
+            <el-button size="large" plain @click="$emit('open-login')">
+              已有账号，去登录
+            </el-button>
+          </div>
+        </div>
+        <div class="hero-logo-panel">
+          <img
+            src="/logo_zhengfangxing.jpg"
+            alt="智签守护 Logo"
+            class="hero-logo"
+          />
+        </div>
       </div>
 
       <div class="hero-highlights">
@@ -117,6 +128,43 @@ h1 {
 
   .hero-highlights {
     grid-template-columns: 1fr;
+  }
+}
+
+.hero-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+  gap: 24px;
+  align-items: center;
+}
+
+.hero-main {
+  min-width: 0;
+}
+
+.hero-logo-panel {
+  min-height: 260px;
+  border-radius: 24px;
+  background: rgba(255, 251, 245, 0.1);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-logo {
+  width: min(76%, 280px);
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 960px) {
+  .hero-top {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-logo-panel {
+    min-height: 180px;
   }
 }
 </style>

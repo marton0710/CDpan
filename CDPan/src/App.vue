@@ -43,9 +43,15 @@ async function handleRegister() {
 
     <header class="site-header">
       <div class="brand-block">
-        <div class="brand-mark">CD</div>
+        <div class="brand-mark">
+          <img
+            src="/logo_zhengfangxing.jpg"
+            alt="智签守护 Logo"
+            class="brand-mark-image"
+          />
+        </div>
         <div>
-          <p class="brand-name">CDPan</p>
+          <p class="brand-name">智签守护</p>
           <p class="brand-subtitle">面向 PDF 交付、签名与追踪的安全文档平台</p>
         </div>
       </div>
